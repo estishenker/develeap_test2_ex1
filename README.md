@@ -24,17 +24,21 @@ Additional switches:
 decompressed
 -r - recursive - will traverse contents of folders recursively, performing unpack on each.
 The following page contains some examples.
+
 ~$ unpack my-zip-file
 Decompressed 1 archive(s)
 What happened? The contents of my-zip-file were written into ~. Command returned 0
 (success)
+
 ~$ unpack my-zip-file my-bz2-file
 Decompressed 2 archive(s)
 What happened? The contents of my-zip-file and my-bz2-file were written into ~. Command
 returned 0 (success)
+
 ~$ unpack some-text-file
 Decompressed 0 archive(s)
 What happened? Command returned 1 (failure for 1 file)
+
 ~$ unpack -v *
 Unpacking my-bz2-file…
 Unpacking my-zip-file...
@@ -43,6 +47,7 @@ Decompressed 2 archive(s)
 What happened? Assuming the directory ~ contained some-text-file, my-zip-file and
 my-bz2-file then the contents of my-zip-file and my-bz2-file were written into ~ and command
 returned 1 (failure for 1 file)
+
 ~$ unpack -v some-folder
 Unpacking a.zip...
 Unpacking b.bz2...
@@ -50,6 +55,7 @@ Decompressed 2 archive(s)
 What happened? Assuming that some-folder had 2 archives and no other files then they
 were unpacked. If it had any subfolders, they were ignored and command returned 0
 (success)
+
 ~$ unpack -r some-folder
 Decompressed 17 archive(s)
 What happened? Assuming that some-folder (and all of its subfolders) had a total of 20 files
